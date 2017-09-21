@@ -1,6 +1,6 @@
 package modelo;
 
-public class Casilla {
+public class Casilla implements Cloneable {
 	
 	private String atributo;
 	
@@ -45,6 +45,13 @@ public class Casilla {
 	
 	public boolean buscarAtributo(String unAtributo){
 		return atributo.equalsIgnoreCase(unAtributo);
+	}
+
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		Casilla unaCasilla = null;
+		unaCasilla = (Casilla) super.clone();
+		return unaCasilla;
 	}
 	
 	

@@ -87,6 +87,7 @@ public class PanelTablero extends JPanel {
 
 	public void movimiento(String atributo, int unaPosX, int unaPosY) {
 		Casilla c = null;
+		boolean movimiento = false;
 		switch (unaPosX) {
 			case 0:
 				switch (unaPosY) {
@@ -97,19 +98,17 @@ public class PanelTablero extends JPanel {
 						// JOptionPane.showMessageDialog(this, "" + c.getPosX()
 						// + " " + c.getPosY());
 						if ((c.getPosX() == 0 && c.getPosY() == 1) || (c.getPosX() == 1 && c.getPosY() == 0)) {
-							JOptionPane.showMessageDialog(this,
-							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
-							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
+
 							/**
 							 * Contruir casilla A contruir casilla B casilla A
 							 * ficha normal casilla B hueco
 							 */
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
-							
+
 						}
 						break;
 					case 1:
@@ -124,10 +123,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 
@@ -145,10 +144,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 
@@ -173,10 +172,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 
@@ -194,10 +193,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 
@@ -216,10 +215,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 
@@ -243,10 +242,10 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 						}
@@ -264,29 +263,29 @@ public class PanelTablero extends JPanel {
 							JOptionPane.showMessageDialog(this,
 							        "Casilla A " + atributo + " " + c.getPosX() + " " + c.getPosY());
 							JOptionPane.showMessageDialog(this, "Casilla B X " + unaPosX + " " + unaPosY);
-							
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 						}
 						break;
-						
+
 					case 2:
 						// selecciona la opcion 22
-						//posibles movimientos 12 21
-						
+						// posibles movimientos 12 21
+
 						c = interfaz.darHueco();
-						if((c.getPosX() == 1 && c.getPosY()==2) || (c.getPosX() == 2 && c.getPosY() == 1) ){
-							
+						if ((c.getPosX() == 1 && c.getPosY() == 2) || (c.getPosX() == 2 && c.getPosY() == 1)) {
+
 							Casilla casillaA = new Casilla(atributo, c.getPosX(), c.getPosY());
 							Casilla casillaB = new Casilla("9", unaPosX, unaPosY);
-							
+
 							interfaz.moverFicha(casillaA, casillaB);
 							interfaz.asignarAtributo();
 						}
-						
+
 						break;
 
 					default:
